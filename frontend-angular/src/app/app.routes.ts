@@ -11,7 +11,7 @@ import { PasswordRecoveryComponent } from './components/password-recovery/passwo
 import { AdminLayoutComponent } from './components/admin-layout/admin-layout.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', component: Login },
   { path: 'login', component: Login },
   { path: 'register', component: Register },
   { path: 'password-recovery', component: PasswordRecoveryComponent },
