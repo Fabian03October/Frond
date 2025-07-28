@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:8000/api'
+  apiUrl: 'https://backend-main-paj3ak.laravel.cloud/api'
 };
