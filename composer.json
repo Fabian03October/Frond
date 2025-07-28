@@ -1,0 +1,11 @@
+{
+  "name": "cinefilos/app-backend",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "cd backend-laravel && composer install --no-dev --optimize-autoloader",
+    "start": "cd backend-laravel && php artisan serve"
+  },
+  "engines": {
+    "php": "^8.1"
+  }
+}
