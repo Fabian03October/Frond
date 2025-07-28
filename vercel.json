@@ -1,18 +1,11 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "frontend-angular/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "frontend-angular/dist/frontend-angular"
-      }
-    }
-  ],
+  "buildCommand": "cd frontend-angular && npm install && npm run build:vercel",
+  "outputDirectory": "frontend-angular/dist/frontend-angular",
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/frontend-angular/dist/frontend-angular/index.html"
+      "dest": "/index.html"
     }
   ]
 }
