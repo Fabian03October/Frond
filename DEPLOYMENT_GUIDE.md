@@ -1,5 +1,8 @@
 # Guía de Despliegue CinefilosAPP
 
+## ⚠️ IMPORTANTE: Repositorio Monorepo
+Tu proyecto tiene ambas carpetas (frontend y backend) en el mismo repositorio. Esta configuración ya está optimizada para esto.
+
 ## Despliegue del Frontend en Vercel
 
 ### Prerequisitos
@@ -11,17 +14,18 @@
 1. **Conectar el repositorio:**
    - Ve a [vercel.com](https://vercel.com)
    - Haz clic en "New Project"
-   - Conecta tu repositorio de GitHub
+   - Conecta tu repositorio de GitHub completo
 
-2. **Configuración del proyecto:**
-   - **Root Directory:** `frontend-angular`
-   - **Framework Preset:** Angular
-   - **Build Command:** `npm run build:vercel` (o déjalo automático)
-   - **Output Directory:** `dist/frontend-angular`
+2. **Configuración del proyecto (MUY IMPORTANTE):**
+   - **Root Directory:** Déjalo vacío (usar la raíz del repositorio)
+   - **Framework Preset:** Other (no selecciones Angular)
+   - **Build Command:** `npm run build` (Vercel detectará automáticamente el package.json de la raíz)
+   - **Output Directory:** `frontend-angular/dist/frontend-angular`
+   - **Install Command:** `npm install` (automático)
 
-3. **Variables de entorno:**
+3. **Variables de entorno (DESPUÉS del primer deploy):**
    - En el dashboard de Vercel, ve a Settings > Environment Variables
-   - Agrega la variable: `PRODUCTION_API_URL` con la URL de tu backend
+   - Agrega: `NODE_ENV` = `production`
 
 4. **Deploy:**
    - Haz clic en "Deploy"
@@ -37,8 +41,9 @@
 
 2. **Crear nuevo proyecto:**
    - Selecciona "Deploy from GitHub repo"
-   - Elige tu repositorio
-   - Selecciona `backend-laravel` como directorio raíz
+   - Elige tu repositorio completo
+   - **Root Path:** `backend-laravel` (MUY IMPORTANTE)
+   - Railway detectará automáticamente que es Laravel
 
 3. **Configurar variables de entorno:**
    ```
