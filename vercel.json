@@ -1,0 +1,9 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "frontend-angular/dist/frontend-angular/browser",
+  "functions": {
+    "app/**": {
+      "runtime": "@vercel/node@20.x"
+    }
+  }
+}
