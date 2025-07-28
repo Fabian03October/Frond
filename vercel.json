@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "cd frontend-angular && npm install && npm run build:vercel",
+  "buildCommand": "npm run build",
   "outputDirectory": "frontend-angular/dist/frontend-angular",
   "routes": [
     {
